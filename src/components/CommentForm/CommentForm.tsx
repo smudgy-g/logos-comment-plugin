@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Card, CardBody, Button, CardHeader } from '@acid-info/lsd-react'
 import { useCommentContext } from '../context/CommentsContext/comments'
 import { useAuth } from '../context/AuthContext'
-import '../..index.css'
+import './CommentForm.css'
 
 
 const CommentForm: React.FC = () => {

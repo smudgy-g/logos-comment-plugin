@@ -1,7 +1,7 @@
 import { formatTimestamp } from '../../utils/timestamp'
 import { Comment, useCommentContext } from '../context/CommentsContext/comments'
 import { Button, ButtonGroup, Card, CardBody, CardHeader } from '@acid-info/lsd-react'
-import '../..index.css'
+import './CommentCard.css'
 
 const CommentCard = ({ data}: { data: Comment }) => {
   const { updateLikes } = useCommentContext()
