@@ -1,3 +1,5 @@
+export { initializeSupabase } from "../supabase";
+
 export {default as GlobalCommentContextProvider} from "./context/GlobalContext";
 export { default as CommentCard } from "./CommentCard";
 export { default as CommentComponent } from "./CommentComponent";
