@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Card, CardBody, Button, CardHeader } from '@acid-info/lsd-react'
 import supabase from '../../supabase'
-import { useCommentContext } from '../../context/CommentsContext/comments'
+import { useCommentContext } from '../context/CommentsContext/comments'
 
 
 const CommentForm: React.FC = () => {

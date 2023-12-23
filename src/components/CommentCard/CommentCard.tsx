@@ -1,5 +1,5 @@
 import { formatTimestamp } from '../../utils/timestamp'
-import { Comment, useCommentContext } from '../../context/CommentsContext/comments'
+import { Comment, useCommentContext } from '../context/CommentsContext/comments'
 import { Button, ButtonGroup, Card, CardBody, CardHeader } from '@acid-info/lsd-react'
 
 const CommentCard = ({ data}: { data: Comment }) => {

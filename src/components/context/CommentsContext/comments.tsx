@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
-import supabase from '../../supabase'
+import supabase from '../../../supabase'
 
 export interface Comment {
   comment_id: number
