@@ -3,6 +3,7 @@ import { Card, CardBody } from '@acid-info/lsd-react'
 import { useCommentContext } from '../context/CommentsContext/comments'
 import CommentForm from '../CommentForm'
 import CommentCard from '../CommentCard'
+import './index.css'
 
 const CommentComponent = () => {
   const { comments } = useCommentContext()
