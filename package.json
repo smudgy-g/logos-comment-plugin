@@ -1,5 +1,8 @@
 {
-  "name": "logos-comment-plugin",
+  "name": "@smudgy-g/logos-comment-plugin",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/smudgy-g"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,12 +11,6 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
-  },
-  "dependencies": {
-    "@acid-info/lsd-react": "^0.1.0-beta.2",
-    "@supabase/supabase-js": "^2.39.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
@@ -33,6 +30,7 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@acid-info/lsd-react": "^0.1.0-beta.2",
     "@supabase/supabase-js": "^2.39.1"
   }
