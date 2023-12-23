@@ -7,11 +7,15 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "types",
     "isolatedModules": true,
-    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
 
     /* Linting */
