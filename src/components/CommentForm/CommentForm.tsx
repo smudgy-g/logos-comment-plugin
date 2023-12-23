@@ -1,23 +1,21 @@
 
 import React, { useState } from 'react'
 import { Card, CardBody, Button, CardHeader } from '@acid-info/lsd-react'
-import supabase from '../../supabase'
 import { useCommentContext } from '../context/CommentsContext/comments'
+import { useAuth } from '../context/AuthContext'
 
 
 const CommentForm: React.FC = () => {
-  // const { session, user } = useAuth()
+  const { session, user } = useAuth()
   const [content, setContent] = useState<string>('')
   const { addComment } = useCommentContext()
-  const session = true
-  const user = {
-    handle: "smudgy-g",
-  }
+  const { signIn } = useAuth()
+  
 
   async function handleSubmit (e: React.FormEvent) {
     e.preventDefault()
     setContent('')
-    addComment(content, user.handle)
+    addComment(content, user?.id as string)
   }
 
   return (
@@ -25,7 +23,7 @@ const CommentForm: React.FC = () => {
       <Card size="small">
         {session && user && (
           <CardHeader>
-            {user.handle}
+            {user.id}
           </CardHeader>
         )}
         <CardBody>
@@ -53,14 +51,7 @@ const CommentForm: React.FC = () => {
                 <Button 
                 variant={"outlined"} 
                 size={"small"}
-                onClick={() =>
-                  supabase.auth.signInWithOAuth({
-                    provider: "github",
-                    options: {
-                      redirectTo: window.location.origin,
-                    }
-                  })
-                }
+                onClick={signIn}
                 >
                   Sign in.
                 </Button>
