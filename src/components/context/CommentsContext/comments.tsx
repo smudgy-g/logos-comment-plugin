@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
-import supabase from '../../../supabase'
-
+import { SupabaseClient } from '@supabase/supabase-js'
 export interface Comment {
   comment_id: number
   content: string
@@ -8,6 +7,10 @@ export interface Comment {
   page_url: string
   username: string
   likes: number
+}
+
+interface CommentProviderProps {
+  supabase: SupabaseClient, children : React.ReactNode
 }
 
 type CommentContextType = {
@@ -24,7 +27,7 @@ export const CommentContext = createContext<CommentContextType>({
   updateLikes: () => {},
 })
 
-export const CommentProvider = ( { children }: { children : React.ReactNode } ) => {
+export const CommentProvider: React.FC<CommentProviderProps> = ( { supabase, children }: CommentProviderProps ) => {
   const [comments, setComments] = useState<Comment[]>([])
   const pageUrlRef = useRef<string>(window.location.href)
 
