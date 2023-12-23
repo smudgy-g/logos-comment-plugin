@@ -5,7 +5,8 @@ export const formatTimestamp = (createdAtString: string) => {
     year: "numeric",
     month: "numeric",
     day: "numeric",
-    
+    hour: "2-digit",
+    minute: "2-digit"
   });
 
   return formatter.format(createdAt);
